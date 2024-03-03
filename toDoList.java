@@ -80,8 +80,16 @@ Project: To-Do-List
             }
         }
     }
+    // Ausgabe
+    private static void printMenu() {
+        System.out.println("\n----- ToDo-Liste-App -----");
+        System.out.println("1. Aufgabe hinzufügen");
+        System.out.println("2. Aufgabe löschen");
+        System.out.println("3. Aufgaben anzeigen");
+        System.out.println("4. Beenden");
+        System.out.print("Geben Sie Ihre Auswahl ein: ");
+    }
 
-    
     }
 
      
