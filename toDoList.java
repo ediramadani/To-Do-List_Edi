@@ -51,8 +51,37 @@ Project: To-Do-List
         }
     }
    
-   
-   
+    private static void addTask() {
+        scanner.nextLine(); // Buffer leeren
+        System.out.print("Geben Sie die Aufgabe ein, die hinzugefügt werden soll: ");
+        String task = scanner.nextLine();
+        tasks.add(task);
+        System.out.println("Aufgabe erfolgreich hinzugefügt!");
+    }
+
+    private static void deleteTask() {
+        scanner.nextLine(); // Buffer leeren
+        System.out.print("Geben Sie die Aufgabe ein, die gelöscht werden soll: ");
+        String task = scanner.nextLine();
+        if (tasks.remove(task)) {
+            System.out.println("Aufgabe erfolgreich gelöscht!");
+        } else {
+            System.out.println("Aufgabe nicht gefunden!");
+        }
+    }
+
+    private static void viewTasks() {
+        System.out.println("\n----- Aufgaben -----");
+        if (tasks.isEmpty()) {
+            System.out.println("Keine Aufgaben vorhanden.");
+        } else {
+            for (int i = 0; i < tasks.size(); i++) {
+                System.out.println((i + 1) + ". " + tasks.get(i));
+            }
+        }
+    }
+
+    
     }
 
      
